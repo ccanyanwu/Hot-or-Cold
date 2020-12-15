@@ -11,9 +11,10 @@ body{
   display :flex ;
   justify-content :center ;
 }
+input{cursor: pointer;}
 main{
   background-clip: padding-box;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   min-height: 100vh ;
   flex-basis: 100%;
 }
@@ -51,7 +52,6 @@ h3{margin-top: 1.5rem ;}
 #play{background: yellow;}
 
 .output{
-  boder:1px solid #f2f2f2;
   height: 3rem ;
   margin: 2rem auto ;
   padding-top: 0.4rem ;
@@ -59,13 +59,15 @@ h3{margin-top: 1.5rem ;}
   width :80%;
 }
 #guess::placeholder{font-size :1.2rem ;}
-h4{color: #1FF333;}
+h4{color: #f37e1f;}
 ul {
   display :flex ;
   flex-wrap: wrap ;
   list-style-type :none ;
   justify-content :space-around ;
+  margin: auto;
   padding :1rem ;
+  width: 80%;
 }
 ul li{
   background :#02507F ;
@@ -80,4 +82,20 @@ ul li{
     40%{color: transparent;}
     80%{color:transparent;}
     100%{color: blue ;}
+}
+/*tab view*/
+@media all and (min-width:48rem){
+  body{background :/*linear-gradient(-45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.8) 100%),*/ url("./images/big.jpg") no-repeat center center fixed;}
+
+  #guess{width :40%;}
+
+  .buttons{justify-content: center ;}
+  .buttons input{
+    margin: 1rem;
+    width :17.5%;
+  }
+  h4, .output{font-size: 3rem;}
+  ul{
+    justify-content: center;
+    width: 40%;}
 }
